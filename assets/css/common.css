@@ -1,0 +1,65 @@
+.blind {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.skipnavi{
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  z-index: 999;
+}
+.skipnavi a {
+  color: #fff;
+  outline: none;
+}
+.skipnavi a:active,
+.skipnavi a:focus,
+.skipnavi a:focus-visible {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  display: block;
+  width: 100%;
+  padding: 13px 0;
+  text-align: center;
+  text-indent: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #222;
+  outline: none;
+}
+.sp_bg01 {
+  background-image: url(../images/bg/bg01.png);
+  background-repeat: no-repeat;
+}
+
+button:focus, a:focus {
+  outline: dashed 2px #2189ff;
+}
+#btn-top {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  width: 34px;
+  height: 34px;
+  margin-left: 600px;
+  opacity: 0;
+  transition: 1s;
+  z-index: 9;
+}
+#btn-top.visible {
+  opacity: 1;
+  bottom: 98px;
+}
+#btn-top::before {
+  content: '';
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background: url(../images/icon/btn_top.png) no-repeat center/cover;
+}
